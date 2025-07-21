@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 interface AboutProps {
   isActive: boolean
 }
@@ -8,27 +6,35 @@ const About = ({ isActive }: AboutProps) => {
   const certifications = [
     {
       id: 1,
-      name: "AWS Certified Solutions Architect – Associate",
-      issuer: "Amazon Web Services (AWS)",
-      date: "Issued May 2023",
-      credentialId: "",
+      name: "AWS Certified Solutions Architect",
+      issuer: "Amazon Web Services",
+      date: "2023",
+      credentialId: "AWS-123456",
       image: "/assets/images/icon-dev.svg"
     },
     {
       id: 2,
-      name: "Google IT Support Professional Certificate",
-      issuer: "Google/Coursera",
-      date: "Issued Jan 2022",
-      credentialId: "",
+      name: "Google Cloud Professional Developer",
+      issuer: "Google Cloud",
+      date: "2023",
+      credentialId: "GCP-789012",
       image: "/assets/images/icon-app.svg"
     },
     {
       id: 3,
-      name: "Microsoft Certified: Azure Fundamentals",
+      name: "Microsoft Azure Developer Associate",
       issuer: "Microsoft",
-      date: "Issued Dec 2021",
-      credentialId: "",
+      date: "2022",
+      credentialId: "AZ-345678",
       image: "/assets/images/icon-design.svg"
+    },
+    {
+      id: 4,
+      name: "Certified Scrum Master (CSM)",
+      issuer: "Scrum Alliance",
+      date: "2022",
+      credentialId: "CSM-901234",
+      image: "/assets/images/icon-photo.svg"
     }
   ]
 
@@ -55,57 +61,6 @@ const About = ({ isActive }: AboutProps) => {
     }
   ]
 
-  const personalProjects = [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack React + Node.js e-commerce solution with payment integration",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "/assets/images/project-1.jpg",
-      link: "#"
-    },
-    {
-      id: 2,
-      title: "Task Management App",
-      description: "Real-time collaborative task management with drag-and-drop interface",
-      tech: ["Vue.js", "Firebase", "Socket.io"],
-      image: "/assets/images/project-2.png",
-      link: "#"
-    },
-    {
-      id: 3,
-      title: "Weather Dashboard",
-      description: "Beautiful weather app with location-based forecasts and maps",
-      tech: ["React", "OpenWeather API", "Leaflet Maps"],
-      image: "/assets/images/project-3.jpg",
-      link: "#"
-    },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      description: "Modern portfolio built with React and TypeScript",
-      tech: ["React", "TypeScript", "Vite", "CSS3"],
-      image: "/assets/images/project-4.png",
-      link: "#"
-    },
-    {
-      id: 5,
-      title: "Chat Application",
-      description: "Real-time messaging app with user authentication",
-      tech: ["React", "Socket.io", "Express", "MongoDB"],
-      image: "/assets/images/project-5.png",
-      link: "#"
-    },
-    {
-      id: 6,
-      title: "Recipe Finder",
-      description: "Recipe search app with filtering and favorites functionality",
-      tech: ["React", "Spoonacular API", "LocalStorage"],
-      image: "/assets/images/project-6.png",
-      link: "#"
-    }
-  ]
-
   return (
     <article className={`about ${isActive ? 'active' : ''}`} data-page="about">
       <header>
@@ -114,10 +69,13 @@ const About = ({ isActive }: AboutProps) => {
 
       <section className="about-text">
         <p>
-          Results-driven Software Engineer with a strong background in web application development and a passion for building scalable, user-centric solutions. Experienced in full-stack development, cloud technologies, and agile methodologies. Adept at collaborating with cross-functional teams to deliver high-quality products on time. Always eager to learn new technologies and take on challenging problems.
+          I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
+          I enjoy turning complex problems into simple, beautiful and intuitive designs.
         </p>
         <p>
-          My expertise includes React, Node.js, Express, MongoDB, AWS, and more. I enjoy contributing to open-source projects and continuously improving my skills through hands-on experience and certifications.
+          My job is to build your website so that it is functional and user-friendly but at the same time attractive.
+          Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
+          across your message and identity in the most creative way. I created web design for many famous brand companies.
         </p>
       </section>
 
