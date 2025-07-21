@@ -6,35 +6,51 @@ const About = ({ isActive }: AboutProps) => {
   const certifications = [
     {
       id: 1,
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
+      name: "Certified Application Associate - SAP TM",
+      issuer: "SAP",
       date: "2023",
-      credentialId: "AWS-123456",
-      image: "/assets/images/icon-dev.svg"
+      credentialId: "SAP-TM-001",
+      image: "/src/assets/logos/sap.svg"
     },
     {
       id: 2,
-      name: "Google Cloud Professional Developer",
-      issuer: "Google Cloud",
-      date: "2023",
-      credentialId: "GCP-789012",
-      image: "/assets/images/icon-app.svg"
+      name: "Certified Application Associate - SAP S/4HANA",
+      issuer: "SAP",
+      date: "2022",
+      credentialId: "SAP-S4-002",
+      image: "/src/assets/logos/sap.svg"
     },
     {
       id: 3,
+      name: "Certified Development Associate - ABAP with SAP NetWeaver",
+      issuer: "SAP",
+      date: "2021",
+      credentialId: "SAP-ABAP-003",
+      image: "/src/assets/logos/sap.svg"
+    },
+    {
+      id: 4,
+      name: "Certified Application Associate - SAP Fiori Application Developer",
+      issuer: "SAP",
+      date: "2021",
+      credentialId: "SAP-FIORI-004",
+      image: "/src/assets/logos/sap.svg"
+    },
+    {
+      id: 5,
       name: "Microsoft Azure Developer Associate",
       issuer: "Microsoft",
       date: "2022",
       credentialId: "AZ-345678",
-      image: "/assets/images/icon-design.svg"
+      image: "/src/assets/logos/microsoft.svg"
     },
     {
-      id: 4,
-      name: "Certified Scrum Master (CSM)",
-      issuer: "Scrum Alliance",
-      date: "2022",
-      credentialId: "CSM-901234",
-      image: "/assets/images/icon-photo.svg"
+      id: 6,
+      name: "AWS Certified Solutions Architect",
+      issuer: "Amazon Web Services",
+      date: "2023",
+      credentialId: "AWS-123456",
+      image: "/src/assets/logos/aws.svg"
     }
   ]
 
@@ -69,13 +85,7 @@ const About = ({ isActive }: AboutProps) => {
 
       <section className="about-text">
         <p>
-          I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-          I enjoy turning complex problems into simple, beautiful and intuitive designs.
-        </p>
-        <p>
-          My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-          Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-          across your message and identity in the most creative way. I created web design for many famous brand companies.
+        Analyst with 2.5 years of experience in SAP ABAP and SAP TM, specializing in technical object development and optimization. Adept at data analysis, problem-solving, process optimization and cross-functional collaboration to drive efficiency and innovation. Passionate about connecting with peers and sharing insights to foster continuous learning.
         </p>
       </section>
 
@@ -103,7 +113,23 @@ const About = ({ isActive }: AboutProps) => {
             <li key={cert.id} className="testimonials-item">
               <div className="content-card" data-testimonials-item>
                 <figure className="testimonials-avatar-box">
-                  <img src={cert.image} alt={cert.name} width="60" data-testimonials-avatar />
+                  <img 
+                    src={cert.image} 
+                    alt={cert.name} 
+                    width="60" 
+                    height="60" 
+                    data-testimonials-avatar 
+                    style={{ 
+                      background: '#fff', 
+                      borderRadius: '12px', 
+                      padding: '8px', 
+                      border: '1px solid #eee', 
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.04)', 
+                      objectFit: 'contain', 
+                      display: 'block', 
+                      margin: '0 auto' 
+                    }} 
+                  />
                 </figure>
                 <h4 className="h4 testimonials-item-title" data-testimonials-title>{cert.name}</h4>
                 <div className="testimonials-text" data-testimonials-text>

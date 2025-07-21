@@ -17,7 +17,7 @@ const Sidebar = ({ }: SidebarProps) => {
 
         <div className="info-content">
           <h1 className="name" title="Rachit Khurana">Rachit Khurana</h1>
-          <p className="title">Software Engineer | Web Developer | Cloud Enthusiast</p>
+          <p className="title">SAP ABAP Developer</p>
         </div>
 
         <button 
@@ -55,7 +55,7 @@ const Sidebar = ({ }: SidebarProps) => {
             </div>
             <div className="contact-info">
               <p className="contact-title">Phone</p>
-              <a href="tel:+12133522795" className="contact-link">+1 (213) 352-2795</a>
+              <a href="tel:+12133522795" className="contact-link">+91 9910124855</a>
             </div>
           </li>
 
@@ -66,7 +66,7 @@ const Sidebar = ({ }: SidebarProps) => {
             </div>
             <div className="contact-info">
               <p className="contact-title">Birthday</p>
-              <time dateTime="1982-06-23">June 23, 1982</time>
+              <time dateTime="1982-06-23">November 24, 2000</time>
             </div>
           </li>
 
