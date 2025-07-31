@@ -8,7 +8,7 @@ const Certifications = ({ isActive }: CertificationsProps) => {
       id: 1,
       title: "SAP Certified Associate - SAP Fiori Application Developer",
       issuer: "SAP",
-      image: "/src/assets/logos/sap.svg",
+      image: "/assets/images/sap.svg",
       date: "May 2025",
       description: "Certified in SAP Fiori application development with expertise in modern UI/UX design and responsive web applications."
     },
@@ -16,7 +16,7 @@ const Certifications = ({ isActive }: CertificationsProps) => {
       id: 2,
       title: "SAP Certified Associate - SAP Generative AI Developer",
       issuer: "SAP",
-      image: "/src/assets/logos/sap.svg",
+      image: "/assets/images/sap.svg",
       date: "Mar 2025",
       description: "Certified in SAP Generative AI development with skills in Artificial Neural Networks and Prompt Engineering."
     },
@@ -24,7 +24,7 @@ const Certifications = ({ isActive }: CertificationsProps) => {
       id: 3,
       title: "SAP Certified Associate - Back-End Developer - ABAP Cloud",
       issuer: "SAP",
-      image: "/src/assets/logos/sap.svg",
+      image: "/assets/images/sap.svg",
       date: "Feb 2025",
       description: "Certified ABAP Cloud developer with expertise in Object Oriented ABAP (OOABAP) and cloud-native development."
     },
@@ -32,7 +32,7 @@ const Certifications = ({ isActive }: CertificationsProps) => {
       id: 4,
       title: "SAP Certified Associate - Backend Developer - SAP Cloud Application Programming Model",
       issuer: "SAP",
-      image: "/src/assets/logos/sap.svg",
+      image: "/assets/images/sap.svg",
       date: "Sep 2024",
       description: "Certified in SAP Cloud Application Programming Model (CAPM) for modern cloud-based application development."
     },
@@ -40,7 +40,7 @@ const Certifications = ({ isActive }: CertificationsProps) => {
       id: 5,
       title: "Microsoft Certified: Azure AI Engineer Associate",
       issuer: "Microsoft",
-      image: "/src/assets/logos/microsoft.svg",
+      image: "/assets/images/microsoft.svg",
       date: "Jun 2025",
       description: "Certified Azure AI Engineer with expertise in artificial intelligence, machine learning, and AI solution development on Microsoft Azure."
     },
@@ -48,7 +48,7 @@ const Certifications = ({ isActive }: CertificationsProps) => {
       id: 6,
       title: "AWS Certified AI Practitioner",
       issuer: "Amazon Web Services",
-      image: "/src/assets/logos/aws-white.svg",
+      image: "/assets/images/aws-white.svg",
       date: "Mar 2025",
       description: "Certified AWS AI Practitioner with skills in Artificial Intelligence, Artificial Neural Networks, and Prompt Engineering on AWS platform."
     },
@@ -56,7 +56,7 @@ const Certifications = ({ isActive }: CertificationsProps) => {
       id: 7,
       title: "Industry Proficiency Foundation: Consumer",
       issuer: "Deloitte",
-      image: "/src/assets/logos/deloitte.svg",
+      image: "/assets/images/deloitte.svg",
       date: "May 2024",
       description: "Certified in Consumer Behavior and industry proficiency foundations for consulting and business transformation."
     },
@@ -64,7 +64,7 @@ const Certifications = ({ isActive }: CertificationsProps) => {
       id: 8,
       title: "Salesforce Certified AI Associate",
       issuer: "Salesforce",
-      image: "/src/assets/logos/salesforce.svg",
+      image: "/assets/images/salesforce.svg",
       date: "Jan 2025",
       description: "Certified Salesforce AI Associate with expertise in Artificial Intelligence and Prompt Engineering on the Salesforce platform."
     }
