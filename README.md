@@ -1,69 +1,53 @@
-# React + TypeScript + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website designed to showcase professional experience, skills, and achievements in the technology industry.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This portfolio represents a comprehensive professional showcase featuring:
 
-## Expanding the ESLint configuration
+- **Professional Experience**: Years of experience in enterprise development
+- **Technical Expertise**: Specialization in enterprise resource planning, cloud platforms, and AI technologies
+- **Certifications**: Multiple industry-recognized certifications from leading technology companies
+- **Projects**: Showcase of technical projects and contributions
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Professional Sections
+- **About**: Personal introduction and core skills
+- **Resume**: Work experience and educational background
+- **Portfolio**: Technical projects and GitHub contributions
+- **Certifications**: Professional certifications with verification links
+- **Contact**: Professional contact information and social links
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Technical Highlights
+- **Enterprise Development**: SAP, Cloud platforms, Modern frameworks
+- **AI & Cloud**: Azure AI, AWS AI, Generative AI, Prompt Engineering
+- **Modern Development**: React, TypeScript, responsive design
+- **Industry Knowledge**: Enterprise consulting, digital transformation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Design
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Modern UI/UX**: Clean, professional design with dark theme
+- **Responsive Layout**: Optimized for all devices and screen sizes
+- **Interactive Elements**: Smooth animations and hover effects
+- **Professional Branding**: Consistent with industry standards
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Technology Stack
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: CSS3 with custom design system
+- **Icons**: Ionicons for professional iconography
+- **Deployment**: Vercel for reliable hosting
+
+## Purpose
+
+This portfolio serves as a digital business card and professional showcase, designed to:
+- Present technical capabilities and experience
+- Demonstrate expertise in modern technologies
+- Provide easy access to professional credentials
+- Facilitate networking and career opportunities
+
+---
+
+*Built with modern web technologies and designed for professional presentation.*
