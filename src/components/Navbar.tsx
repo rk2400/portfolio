@@ -8,7 +8,7 @@ const Navbar = ({ activePage, onPageChange }: NavbarProps) => {
     { id: 'about', label: 'About' },
     { id: 'resume', label: 'Resume' },
     { id: 'portfolio', label: 'Portfolio' },
-    { id: 'blog', label: 'Blog' },
+    { id: 'certifications', label: 'Certifications' },
     { id: 'contact', label: 'Contact' }
   ]
 

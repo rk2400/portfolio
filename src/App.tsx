@@ -5,7 +5,7 @@ import Navbar from './components/Navbar.tsx'
 import About from './components/About.tsx'
 import Resume from './components/Resume.tsx'
 import Portfolio from './components/Portfolio.tsx'
-import Blog from './components/Blog.tsx'
+import Certifications from './components/Blog.tsx'
 import Contact from './components/Contact.tsx'
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
   // Always keep dark mode active
   if (typeof document !== 'undefined') {
     document.body.classList.add('dark-mode')
+    document.body.classList.remove('light-mode')
   }
 
   return (
@@ -31,7 +32,7 @@ function App() {
         <About isActive={activePage === 'about'} />
         <Resume isActive={activePage === 'resume'} />
         <Portfolio isActive={activePage === 'portfolio'} />
-        <Blog isActive={activePage === 'blog'} />
+        <Certifications isActive={activePage === 'certifications'} />
         <Contact isActive={activePage === 'contact'} />
       </div>
     </main>

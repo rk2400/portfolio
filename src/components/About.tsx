@@ -3,77 +3,26 @@ interface AboutProps {
 }
 
 const About = ({ isActive }: AboutProps) => {
-  const certifications = [
-    {
-      id: 1,
-      name: "Certified Application Associate - SAP TM",
-      issuer: "SAP",
-      date: "2023",
-      credentialId: "SAP-TM-001",
-      image: "/src/assets/logos/sap.svg"
-    },
-    {
-      id: 2,
-      name: "Certified Application Associate - SAP S/4HANA",
-      issuer: "SAP",
-      date: "2022",
-      credentialId: "SAP-S4-002",
-      image: "/src/assets/logos/sap.svg"
-    },
-    {
-      id: 3,
-      name: "Certified Development Associate - ABAP with SAP NetWeaver",
-      issuer: "SAP",
-      date: "2021",
-      credentialId: "SAP-ABAP-003",
-      image: "/src/assets/logos/sap.svg"
-    },
-    {
-      id: 4,
-      name: "Certified Application Associate - SAP Fiori Application Developer",
-      issuer: "SAP",
-      date: "2021",
-      credentialId: "SAP-FIORI-004",
-      image: "/src/assets/logos/sap.svg"
-    },
-    {
-      id: 5,
-      name: "Microsoft Azure Developer Associate",
-      issuer: "Microsoft",
-      date: "2022",
-      credentialId: "AZ-345678",
-      image: "/src/assets/logos/microsoft.svg"
-    },
-    {
-      id: 6,
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      credentialId: "AWS-123456",
-      image: "/src/assets/logos/aws.svg"
-    }
-  ]
-
-  const services = [
+  const skills = [
     {
       icon: "/assets/images/icon-design.svg",
-      title: "Web design",
-      description: "The most modern and high-quality design made at a professional level."
+      title: "Technical Skills",
+      description: "ABAP, C++, Web Technologies, SAP, SQL, AI/ML, JavaScript, TypeScript, React, Node.js, Python, Git, Docker, AWS, Azure."
     },
     {
       icon: "/assets/images/icon-dev.svg",
-      title: "Web development",
-      description: "High-quality development of sites at the professional level."
+      title: "Soft Skills",
+      description: "Problem-solving, Analytical thinking, Cross-functional collaboration, Communication, Time management, Adaptability, Team leadership, Process optimization."
     },
     {
       icon: "/assets/images/icon-app.svg",
-      title: "Mobile apps",
-      description: "Professional development of applications for iOS and Android."
+      title: "SAP TM",
+      description: "OOABAP, CDS Views, BOPF Framework, ALV Reports, OData Services, IDOC Processing, SAP Fiori, NetWeaver Gateway, Business Objects."
     },
     {
       icon: "/assets/images/icon-photo.svg",
       title: "Photography",
-      description: "I make high-quality photos of any category at a professional level."
+      description: "Passionate about capturing moments through lens. Specializing in landscape and street photography. Love exploring new perspectives and creative compositions."
     }
   ]
 
@@ -90,57 +39,111 @@ const About = ({ isActive }: AboutProps) => {
       </section>
 
       <section className="service">
-        <h3 className="h3 service-title">What i'm doing</h3>
+        <h3 className="h3 service-title">Skills</h3>
         <ul className="service-list">
-          {services.map((service, index) => (
+          {skills.map((skill, index) => (
             <li key={index} className="service-item">
               <div className="service-icon-box">
-                <img src={service.icon} alt={`${service.title} icon`} width="40" />
+                <img src={skill.icon} alt={`${skill.title} icon`} width="40" />
               </div>
               <div className="service-content-box">
-                <h4 className="h4 service-item-title">{service.title}</h4>
-                <p className="service-item-text">{service.description}</p>
+                <h4 className="h4 service-item-title">{skill.title}</h4>
+                <p className="service-item-text">{skill.description}</p>
               </div>
             </li>
           ))}
         </ul>
       </section>
 
-      <section className="testimonials">
-        <h3 className="h3 testimonials-title">Certifications</h3>
-        <ul className="testimonials-list has-scrollbar">
-          {certifications.map((cert) => (
-            <li key={cert.id} className="testimonials-item">
-              <div className="content-card" data-testimonials-item>
-                <figure className="testimonials-avatar-box">
-                  <img 
-                    src={cert.image} 
-                    alt={cert.name} 
-                    width="60" 
-                    height="60" 
-                    data-testimonials-avatar 
-                    style={{ 
-                      background: '#fff', 
-                      borderRadius: '12px', 
-                      padding: '8px', 
-                      border: '1px solid #eee', 
-                      boxShadow: '0 2px 8px rgba(0,0,0,0.04)', 
-                      objectFit: 'contain', 
-                      display: 'block', 
-                      margin: '0 auto' 
-                    }} 
-                  />
-                </figure>
-                <h4 className="h4 testimonials-item-title" data-testimonials-title>{cert.name}</h4>
-                <div className="testimonials-text" data-testimonials-text>
-                  <p><strong>Issuer:</strong> {cert.issuer}</p>
-                  <p><strong>Date:</strong> {cert.date}</p>
-                  <p><strong>ID:</strong> {cert.credentialId}</p>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+      <section className="core-values">
+        <h3 className="h3 service-title">Core Values & Approach</h3>
+        <div className="values-grid">
+          <div className="value-item">
+            <div className="value-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="bulb-outline"></ion-icon>
+            </div>
+            <h4 className="h4 value-title">Innovation-Driven</h4>
+            <p className="value-text">Continuously exploring emerging technologies and best practices to deliver cutting-edge solutions that drive business transformation and competitive advantage.</p>
+          </div>
+          
+          <div className="value-item">
+            <div className="value-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="shield-checkmark-outline"></ion-icon>
+            </div>
+            <h4 className="h4 value-title">Quality-First</h4>
+            <p className="value-text">Adhering to enterprise-grade coding standards, comprehensive testing protocols, and robust error handling to ensure reliable, maintainable, and scalable solutions.</p>
+          </div>
+          
+          <div className="value-item">
+            <div className="value-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="people-outline"></ion-icon>
+            </div>
+            <h4 className="h4 value-title">Collaborative Excellence</h4>
+            <p className="value-text">Fostering cross-functional partnerships, knowledge sharing, and agile methodologies to deliver solutions that exceed stakeholder expectations and drive organizational success.</p>
+          </div>
+          
+          <div className="value-item">
+            <div className="value-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="trending-up-outline"></ion-icon>
+            </div>
+            <h4 className="h4 value-title">Continuous Learning</h4>
+            <p className="value-text">Committed to lifelong learning through certifications, industry conferences, and hands-on experimentation with emerging technologies to stay ahead of the curve.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="industry-expertise">
+        <h3 className="h3 service-title">Industry Expertise</h3>
+        <div className="expertise-content">
+          <div className="expertise-item">
+            <h4 className="h4 expertise-title">Enterprise Resource Planning (ERP)</h4>
+            <p className="expertise-text">Deep expertise in SAP S/4HANA ecosystem, specializing in custom development, system integration, and process optimization for Fortune 500 companies across manufacturing, logistics, and retail sectors.</p>
+          </div>
+          
+          <div className="expertise-item">
+            <h4 className="h4 expertise-title">Supply Chain & Transportation</h4>
+            <p className="expertise-text">Proven track record in SAP Transportation Management (TM) implementations, route optimization, freight management, and end-to-end logistics solutions that reduce costs and improve operational efficiency.</p>
+          </div>
+          
+          <div className="expertise-item">
+            <h4 className="h4 expertise-title">Digital Transformation</h4>
+            <p className="expertise-text">Leading modernization initiatives through SAP Fiori UX, cloud migration strategies, API-first architectures, and integration with emerging technologies like AI/ML and IoT for next-generation enterprise solutions.</p>
+          </div>
+          
+          <div className="expertise-item">
+            <h4 className="h4 expertise-title">Data Analytics & Business Intelligence</h4>
+            <p className="expertise-text">Expertise in CDS views, HANA modeling, real-time analytics, and business intelligence solutions that transform raw data into actionable insights for strategic decision-making.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="work-philosophy">
+        <h3 className="h3 service-title">Work Philosophy</h3>
+        <div className="philosophy-content">
+          <div className="philosophy-principle">
+            <h4 className="h4 principle-title">User-Centric Development</h4>
+            <p className="principle-text">Every solution begins with understanding end-user needs, business processes, and stakeholder requirements. I believe in creating intuitive, efficient, and scalable applications that enhance user experience and drive productivity.</p>
+          </div>
+          
+          <div className="philosophy-principle">
+            <h4 className="h4 principle-title">Agile Excellence</h4>
+            <p className="principle-text">Embracing iterative development, continuous feedback loops, and adaptive planning to deliver high-quality solutions rapidly while maintaining flexibility to accommodate evolving business needs and market dynamics.</p>
+          </div>
+          
+          <div className="philosophy-principle">
+            <h4 className="h4 principle-title">Performance Optimization</h4>
+            <p className="principle-text">Committed to writing clean, efficient code with optimal database queries, minimal resource consumption, and robust error handling to ensure applications perform seamlessly under high load and complex business scenarios.</p>
+          </div>
+          
+          <div className="philosophy-principle">
+            <h4 className="h4 principle-title">Security & Compliance</h4>
+            <p className="principle-text">Implementing enterprise-grade security measures, data protection protocols, and compliance standards to safeguard sensitive information while maintaining system integrity and regulatory adherence.</p>
+          </div>
+        </div>
       </section>
     </article>
   )

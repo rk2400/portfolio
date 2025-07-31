@@ -1,84 +1,100 @@
-interface BlogProps {
+interface CertificationsProps {
   isActive: boolean
 }
 
-const Blog = ({ isActive }: BlogProps) => {
-  const blogPosts = [
+const Certifications = ({ isActive }: CertificationsProps) => {
+  const certifications = [
     {
       id: 1,
-      title: "Design conferences in 2022",
-      category: "Design",
-      image: "/assets/images/blog-1.jpg",
-      date: "Fab 23, 2022",
-      description: "Veritatis et quasi architecto beatae vitae dicta sunt, explicabo."
+      title: "SAP Certified Associate - SAP Fiori Application Developer",
+      issuer: "SAP",
+      image: "/src/assets/logos/sap.svg",
+      date: "May 2025",
+      description: "Certified in SAP Fiori application development with expertise in modern UI/UX design and responsive web applications."
     },
     {
       id: 2,
-      title: "Best fonts every designer",
-      category: "Design",
-      image: "/assets/images/blog-2.jpg",
-      date: "Fab 23, 2022",
-      description: "Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi."
+      title: "SAP Certified Associate - SAP Generative AI Developer",
+      issuer: "SAP",
+      image: "/src/assets/logos/sap.svg",
+      date: "Mar 2025",
+      description: "Certified in SAP Generative AI development with skills in Artificial Neural Networks and Prompt Engineering."
     },
     {
       id: 3,
-      title: "Design digest #80",
-      category: "Design",
-      image: "/assets/images/blog-3.jpg",
-      date: "Fab 23, 2022",
-      description: "Excepteur sint occaecat cupidatat no proident, quis nostrud exercitation."
+      title: "SAP Certified Associate - Back-End Developer - ABAP Cloud",
+      issuer: "SAP",
+      image: "/src/assets/logos/sap.svg",
+      date: "Feb 2025",
+      description: "Certified ABAP Cloud developer with expertise in Object Oriented ABAP (OOABAP) and cloud-native development."
     },
     {
       id: 4,
-      title: "UI interactions of the week",
-      category: "Design",
-      image: "/assets/images/blog-4.jpg",
-      date: "Fab 23, 2022",
-      description: "Enim ad minim veniam, consectetur adipiscing elit, quis nostrud."
+      title: "SAP Certified Associate - Backend Developer - SAP Cloud Application Programming Model",
+      issuer: "SAP",
+      image: "/src/assets/logos/sap.svg",
+      date: "Sep 2024",
+      description: "Certified in SAP Cloud Application Programming Model (CAPM) for modern cloud-based application development."
     },
     {
       id: 5,
-      title: "The forgotten art of spacing",
-      category: "Design",
-      image: "/assets/images/blog-5.jpg",
-      date: "Fab 23, 2022",
-      description: "Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna."
+      title: "Microsoft Certified: Azure AI Engineer Associate",
+      issuer: "Microsoft",
+      image: "/src/assets/logos/microsoft.svg",
+      date: "Jun 2025",
+      description: "Certified Azure AI Engineer with expertise in artificial intelligence, machine learning, and AI solution development on Microsoft Azure."
     },
     {
       id: 6,
-      title: "Design digest #79",
-      category: "Design",
-      image: "/assets/images/blog-6.jpg",
-      date: "Fab 23, 2022",
-      description: "Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum."
+      title: "AWS Certified AI Practitioner",
+      issuer: "Amazon Web Services",
+      image: "/src/assets/logos/aws-white.svg",
+      date: "Mar 2025",
+      description: "Certified AWS AI Practitioner with skills in Artificial Intelligence, Artificial Neural Networks, and Prompt Engineering on AWS platform."
+    },
+    {
+      id: 7,
+      title: "Industry Proficiency Foundation: Consumer",
+      issuer: "Deloitte",
+      image: "/src/assets/logos/deloitte.svg",
+      date: "May 2024",
+      description: "Certified in Consumer Behavior and industry proficiency foundations for consulting and business transformation."
+    },
+    {
+      id: 8,
+      title: "Salesforce Certified AI Associate",
+      issuer: "Salesforce",
+      image: "/src/assets/logos/salesforce.svg",
+      date: "Jan 2025",
+      description: "Certified Salesforce AI Associate with expertise in Artificial Intelligence and Prompt Engineering on the Salesforce platform."
     }
   ]
 
   return (
-    <article className={`blog ${isActive ? 'active' : ''}`} data-page="blog">
+    <article className={`certifications ${isActive ? 'active' : ''}`} data-page="certifications">
       <header>
-        <h2 className="h2 article-title">Blog</h2>
+        <h2 className="h2 article-title">Certifications</h2>
       </header>
 
-      <section className="blog-posts">
-        <ul className="blog-posts-list">
-          {blogPosts.map((post) => (
-            <li key={post.id} className="blog-post-item">
-              <a href="#">
-                <figure className="blog-banner-box">
-                  <img src={post.image} alt={post.title} loading="lazy" />
+      <section className="certifications-list">
+        <ul className="certifications-grid">
+          {certifications.map((cert) => (
+            <li key={cert.id} className="certification-item">
+              <a href="https://www.credly.com" target="_blank" rel="noopener noreferrer">
+                <figure className="certification-banner-box">
+                  <img src={cert.image} alt={cert.title} loading="lazy" />
                 </figure>
 
-                <div className="blog-content">
-                  <div className="blog-meta">
-                    <p className="blog-category">{post.category}</p>
+                <div className="certification-content">
+                  <div className="certification-meta">
+                    <p className="certification-issuer">{cert.issuer}</p>
                     <span className="dot"></span>
-                    <time dateTime="2022-02-23">{post.date}</time>
+                    <time dateTime={cert.date}>{cert.date}</time>
                   </div>
 
-                  <h3 className="h3 blog-item-title">{post.title}</h3>
+                  <h3 className="h3 certification-item-title">{cert.title}</h3>
 
-                  <p className="blog-text">{post.description}</p>
+                  <p className="certification-text">{cert.description}</p>
                 </div>
               </a>
             </li>
@@ -89,4 +105,4 @@ const Blog = ({ isActive }: BlogProps) => {
   )
 }
 
-export default Blog 
+export default Certifications 
