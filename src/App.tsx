@@ -11,23 +11,40 @@ import Contact from './components/Contact.tsx'
 function App() {
   const [activePage, setActivePage] = useState('about')
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true) // Changed back to true for default dark mode
 
-  // Always keep dark mode active
-  if (typeof document !== 'undefined') {
-    document.body.classList.add('dark-mode')
-    document.body.classList.remove('light-mode')
+  // Handle theme changes
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode)
+    if (typeof document !== 'undefined') {
+      if (isDarkMode) {
+        document.body.classList.remove('dark-mode')
+        document.body.classList.add('light-mode')
+      } else {
+        document.body.classList.add('dark-mode')
+        document.body.classList.remove('light-mode')
+      }
+    }
+  }
+
+  // Initialize theme on mount
+  if (typeof document !== 'undefined' && isDarkMode) { // Modified condition
+    document.body.classList.add('dark-mode') // Added dark-mode
+    document.body.classList.remove('light-mode') // Removed light-mode
   }
 
   return (
     <main>
-      <Sidebar 
-        isOpen={sidebarOpen} 
-        onToggle={() => setSidebarOpen(!sidebarOpen)} 
+      <Sidebar
+        isOpen={sidebarOpen}
+        onToggle={() => setSidebarOpen(!sidebarOpen)}
+        isDark={isDarkMode}
+        onThemeToggle={toggleTheme}
       />
       <div className="main-content">
-        <Navbar 
-          activePage={activePage} 
-          onPageChange={setActivePage} 
+        <Navbar
+          activePage={activePage}
+          onPageChange={setActivePage}
         />
         <About isActive={activePage === 'about'} />
         <Resume isActive={activePage === 'resume'} />

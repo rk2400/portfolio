@@ -1,11 +1,14 @@
 import { useState } from 'react'
+import ThemeToggle from './ThemeToggle.tsx'
 
 interface SidebarProps {
   isOpen: boolean
   onToggle: () => void
+  isDark: boolean
+  onThemeToggle: () => void
 }
 
-const Sidebar = ({ }: SidebarProps) => {
+const Sidebar = ({ isDark, onThemeToggle }: SidebarProps) => {
   const [showContacts, setShowContacts] = useState(false)
 
   return (
@@ -98,12 +101,18 @@ const Sidebar = ({ }: SidebarProps) => {
             </a>
           </li>
           <li className="social-item">
-            <a href="/assets/resume.pdf" className="social-link" download title="Download Resume">
+            <a href="https://twitter.com/" className="social-link" target="_blank" rel="noopener noreferrer">
               {/* @ts-ignore */}
-              <ion-icon name="download-outline"></ion-icon>
+              <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
         </ul>
+
+        <div className="separator"></div>
+
+        <div className="sidebar-theme-toggle">
+          <ThemeToggle isDark={isDark} onToggle={onThemeToggle} />
+        </div>
       </div>
     </aside>
   )
