@@ -12,7 +12,7 @@ const Sidebar = ({ }: SidebarProps) => {
     <aside className={`sidebar ${showContacts ? 'active' : ''}`} data-sidebar>
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src="/assets/images/my-avatar.png" alt="Richard hanrick" width="80" />
+          <img src="/assets/images/Profile Pic.jpg" alt="Rachit Khurana" width="80" />
         </figure>
 
         <div className="info-content">
