@@ -36,6 +36,10 @@ const Sidebar = ({ isDark, onThemeToggle }: SidebarProps) => {
         </button>
       </div>
 
+      <div className="sidebar-theme-toggle">
+        <ThemeToggle isDark={isDark} onToggle={onThemeToggle} />
+      </div>
+
       <div className="sidebar-info_more">
         <div className="separator"></div>
 
@@ -107,12 +111,6 @@ const Sidebar = ({ isDark, onThemeToggle }: SidebarProps) => {
             </a>
           </li>
         </ul>
-
-        <div className="separator"></div>
-
-        <div className="sidebar-theme-toggle">
-          <ThemeToggle isDark={isDark} onToggle={onThemeToggle} />
-        </div>
       </div>
     </aside>
   )

@@ -5,12 +5,12 @@ interface AboutProps {
 const About = ({ isActive }: AboutProps) => {
   const skills = [
     {
-      icon: "/assets/images/icon-design.svg",
+      icon: "/assets/images/icon-dev.svg",
       title: "Technical Skills",
       description: "ABAP, C++, Web Technologies, SAP, SQL, AI/ML, JavaScript, TypeScript, React, Node.js, Python, Git, Docker, AWS, Azure."
     },
     {
-      icon: "/assets/images/icon-dev.svg",
+      icon: "/assets/images/icon-design.svg",
       title: "Soft Skills",
       description: "Problem-solving, Analytical thinking, Cross-functional collaboration, Communication, Time management, Adaptability, Team leadership, Process optimization."
     },

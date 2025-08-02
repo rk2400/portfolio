@@ -12,12 +12,31 @@ const Contact = ({ isActive }: ContactProps) => {
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error' | 'email-error'>('idle')
   const [statusMessage, setStatusMessage] = useState('')
   const notificationTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
 
+  // Email validation function
+  const isValidEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Validate email before submission
+    if (!isValidEmail(formData.email)) {
+      setSubmitStatus('email-error')
+      setStatusMessage('Please enter a valid email address. The email format you entered is incorrect.')
+      if (notificationTimeout.current) clearTimeout(notificationTimeout.current)
+      notificationTimeout.current = setTimeout(() => {
+        setSubmitStatus('idle')
+        setStatusMessage('')
+      }, 4000)
+      return
+    }
+
     setIsSubmitting(true)
     setSubmitStatus('idle')
     setStatusMessage('')
@@ -36,25 +55,25 @@ const Contact = ({ isActive }: ContactProps) => {
       
       if (response.ok) {
         setSubmitStatus('success')
-        setStatusMessage('Thank you! Your message has been sent successfully. I\'ll get back to you soon!')
+        setStatusMessage('Message sent successfully! I\'ll get back to you soon.')
         setFormData({ name: '', email: '', subject: '', message: '' })
-        // Auto-hide notification after 3 seconds
+        // Auto-hide notification after 4 seconds
         if (notificationTimeout.current) clearTimeout(notificationTimeout.current)
         notificationTimeout.current = setTimeout(() => {
           setSubmitStatus('idle')
           setStatusMessage('')
-        }, 3000)
+        }, 4000)
       } else {
         throw new Error('Form submission failed')
       }
     } catch (error) {
       setSubmitStatus('error')
-      setStatusMessage('Sorry, there was an error sending your message. Please try again or contact me directly at rachi.khurana1124@gmail.com')
+      setStatusMessage('Failed to send message. Please try again or contact me directly.')
       if (notificationTimeout.current) clearTimeout(notificationTimeout.current)
       notificationTimeout.current = setTimeout(() => {
         setSubmitStatus('idle')
         setStatusMessage('')
-      }, 3000)
+      }, 4000)
     } finally {
       setIsSubmitting(false)
     }
@@ -87,6 +106,65 @@ const Contact = ({ isActive }: ContactProps) => {
     </button>
   )
 
+  // Notification Pop-up Component
+  const NotificationPopup = () => {
+    if (submitStatus === 'idle') return null
+
+    const getNotificationConfig = () => {
+      switch (submitStatus) {
+        case 'success':
+          return {
+            icon: 'checkmark-circle',
+            title: 'Success!',
+            className: 'success'
+          }
+        case 'email-error':
+          return {
+            icon: 'warning',
+            title: 'Invalid Email',
+            className: 'email-error'
+          }
+        case 'error':
+        default:
+          return {
+            icon: 'close-circle',
+            title: 'Error',
+            className: 'error'
+          }
+      }
+    }
+
+    const config = getNotificationConfig()
+
+    return (
+      <div className={`notification-popup ${config.className}`}>
+        <div className="notification-content">
+          <div className="notification-icon">
+            {/* @ts-ignore */}
+            <ion-icon name={config.icon}></ion-icon>
+          </div>
+          <div className="notification-text">
+            <h4 className="notification-title">
+              {config.title}
+            </h4>
+            <p className="notification-message">{statusMessage}</p>
+          </div>
+          <button 
+            className="notification-close"
+            onClick={() => {
+              setSubmitStatus('idle')
+              setStatusMessage('')
+              if (notificationTimeout.current) clearTimeout(notificationTimeout.current)
+            }}
+          >
+            {/* @ts-ignore */}
+            <ion-icon name="close"></ion-icon>
+          </button>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <article className={`contact ${isActive ? 'active' : ''}`} data-page="contact">
       <header>
@@ -105,12 +183,8 @@ const Contact = ({ isActive }: ContactProps) => {
       <section className="contact-form">
         <h3 className="h3 form-title">Contact Form</h3>
 
-        {/* Notification */}
-        {submitStatus !== 'idle' && statusMessage && (
-          <div className={`form-status-notification ${submitStatus}`}>
-            <p>{statusMessage.replace('rachi.khurana1124@gmail.com', 'rachit.khurana1124@gmail.com')}</p>
-          </div>
-        )}
+        {/* Notification Pop-up */}
+        <NotificationPopup />
 
         <form onSubmit={handleSubmit} className="form" data-form>
           <div className="input-wrapper">
