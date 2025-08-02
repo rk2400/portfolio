@@ -44,7 +44,15 @@ const About = ({ isActive }: AboutProps) => {
           {skills.map((skill, index) => (
             <li key={index} className="service-item">
               <div className="service-icon-box">
-                <img src={skill.icon} alt={`${skill.title} icon`} width="40" />
+                {skill.title === "SAP TM" ? (
+                  // @ts-ignore
+                  <ion-icon name="car-outline"></ion-icon>
+                ) : skill.title === "Soft Skills" ? (
+                  // @ts-ignore
+                  <ion-icon name="chatbubbles-outline"></ion-icon>
+                ) : (
+                  <img src={skill.icon} alt={`${skill.title} icon`} width="40" />
+                )}
               </div>
               <div className="service-content-box">
                 <h4 className="h4 service-item-title">{skill.title}</h4>
@@ -53,6 +61,8 @@ const About = ({ isActive }: AboutProps) => {
             </li>
           ))}
         </ul>
+        
+
       </section>
 
       <section className="core-values">
@@ -100,21 +110,37 @@ const About = ({ isActive }: AboutProps) => {
         <h3 className="h3 service-title">Industry Expertise</h3>
         <div className="expertise-content">
           <div className="expertise-item">
+            <div className="expertise-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="business-outline"></ion-icon>
+            </div>
             <h4 className="h4 expertise-title">Enterprise Resource Planning (ERP)</h4>
             <p className="expertise-text">Deep expertise in SAP S/4HANA ecosystem, specializing in custom development, system integration, and process optimization for Fortune 500 companies across manufacturing, logistics, and retail sectors.</p>
           </div>
           
           <div className="expertise-item">
+            <div className="expertise-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="car-outline"></ion-icon>
+            </div>
             <h4 className="h4 expertise-title">Supply Chain & Transportation</h4>
             <p className="expertise-text">Proven track record in SAP Transportation Management (TM) implementations, route optimization, freight management, and end-to-end logistics solutions that reduce costs and improve operational efficiency.</p>
           </div>
           
           <div className="expertise-item">
+            <div className="expertise-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="flash-outline"></ion-icon>
+            </div>
             <h4 className="h4 expertise-title">Digital Transformation</h4>
             <p className="expertise-text">Leading modernization initiatives through SAP Fiori UX, cloud migration strategies, API-first architectures, and integration with emerging technologies like AI/ML and IoT for next-generation enterprise solutions.</p>
           </div>
           
           <div className="expertise-item">
+            <div className="expertise-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="analytics-outline"></ion-icon>
+            </div>
             <h4 className="h4 expertise-title">Data Analytics & Business Intelligence</h4>
             <p className="expertise-text">Expertise in CDS views, HANA modeling, real-time analytics, and business intelligence solutions that transform raw data into actionable insights for strategic decision-making.</p>
           </div>
@@ -125,21 +151,37 @@ const About = ({ isActive }: AboutProps) => {
         <h3 className="h3 service-title">Work Philosophy</h3>
         <div className="philosophy-content">
           <div className="philosophy-principle">
+            <div className="philosophy-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="person-outline"></ion-icon>
+            </div>
             <h4 className="h4 principle-title">User-Centric Development</h4>
             <p className="principle-text">Every solution begins with understanding end-user needs, business processes, and stakeholder requirements. I believe in creating intuitive, efficient, and scalable applications that enhance user experience and drive productivity.</p>
           </div>
           
           <div className="philosophy-principle">
+            <div className="philosophy-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="refresh-outline"></ion-icon>
+            </div>
             <h4 className="h4 principle-title">Agile Excellence</h4>
             <p className="principle-text">Embracing iterative development, continuous feedback loops, and adaptive planning to deliver high-quality solutions rapidly while maintaining flexibility to accommodate evolving business needs and market dynamics.</p>
           </div>
           
           <div className="philosophy-principle">
+            <div className="philosophy-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="speedometer-outline"></ion-icon>
+            </div>
             <h4 className="h4 principle-title">Performance Optimization</h4>
             <p className="principle-text">Committed to writing clean, efficient code with optimal database queries, minimal resource consumption, and robust error handling to ensure applications perform seamlessly under high load and complex business scenarios.</p>
           </div>
           
           <div className="philosophy-principle">
+            <div className="philosophy-icon">
+              {/* @ts-ignore */}
+              <ion-icon name="shield-checkmark-outline"></ion-icon>
+            </div>
             <h4 className="h4 principle-title">Security & Compliance</h4>
             <p className="principle-text">Implementing enterprise-grade security measures, data protection protocols, and compliance standards to safeguard sensitive information while maintaining system integrity and regulatory adherence.</p>
           </div>
