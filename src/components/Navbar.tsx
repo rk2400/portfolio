@@ -7,7 +7,7 @@ const Navbar = ({ activePage, onPageChange }: NavbarProps) => {
   const navItems = [
     { id: 'about', label: 'About' },
     { id: 'resume', label: 'Resume' },
-    { id: 'portfolio', label: 'Portfolio' },
+    { id: 'portfolio', label: 'Projects' },
     { id: 'certifications', label: 'Certifications' },
     { id: 'contact', label: 'Contact' }
   ]

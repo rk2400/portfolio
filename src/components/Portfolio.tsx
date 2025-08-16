@@ -13,93 +13,82 @@ const Portfolio = ({ isActive }: PortfolioProps) => {
     // Web Development Projects (4)
     {
       id: 1,
-      title: "bookspot",
+      title: "CharitySphere",
       category: "Web Development",
-      image: "/assets/images/project-1.jpg",
-      link: "https://github.com/rk2400/bookspot",
-      description: "A web app for discovering and sharing books. Built with HTML, CSS, and JavaScript."
+      image: "/assets/images/project-1.jpg",      
+      description: "MERN Stack Project for Event Management and PHP Framework for Donation Management System."
     },
     {
       id: 2,
-      title: "Minor1",
+      title: "Handicraft Store",
       category: "Web Development",
-      image: "/assets/images/project-2.png",
-      link: "https://github.com/rk2400/Minor1",
-      description: "A JavaScript-based project focused on interactive web features."
+      image: "/assets/images/project-2.jpg",
+      description: "Simple MERN Stack E-commerce Website for Handicrafts with payment gateway integration."
     },
     {
       id: 3,
-      title: "Major",
+      title: "Portfolio",
       category: "Web Development",
-      image: "/assets/images/project-4.png",
-      link: "https://github.com/rk2400/Major",
-      description: "A major academic project built with HTML and JavaScript."
+      image: "/assets/images/project-4.jpg",
+      description: "Personal Portfolio Website built with HTML, CSS, and TypeScript."
     },
     {
       id: 4,
-      title: "bankist",
+      title: "Brainwave",
       category: "Web Development",
-      image: "/assets/images/project-5.png",
-      link: "https://github.com/rk2400/bankist",
-      description: "A modern banking app simulation using JavaScript."
+      image: "/assets/images/project-5.jpg",
+      description: "MERN stack application for total well being management including mental and physical health with firestore database."
     },
     // UiPath Projects (2)
     {
       id: 5,
-      title: "UiPath Automation",
+      title: "UiPath Automation - Price Comparison Bot",
       category: "UiPath",
-      image: "/assets/images/project-6.png",
-      link: "#",
-      description: "Automated business processes using UiPath RPA platform."
+      image: "/assets/images/project-6.jpg",
+      description: "Automated price comparison of products from different e-commerce websites using UiPath RPA platform."
     },
     {
       id: 6,
-      title: "Data Processing Bot",
+      title: "UiPath Automation - SAP Pruchase Order Creation Automation",
       category: "UiPath",
-      image: "/assets/images/project-7.png",
-      link: "#",
-      description: "Intelligent data processing and validation automation."
+      image: "/assets/images/project-7.avif",
+      description: "Automated SAP Pruchase Order Creation using UiPath RPA platform."
     },
     // SAP Projects (5)
     {
       id: 7,
-      title: "SAP ERP Integration",
+      title: "SAP Mass Resource Creation",
       category: "SAP",
       image: "/assets/images/project-8.jpg",
-      link: "#",
-      description: "Enterprise resource planning system integration and optimization."
+      description: "Automated Mass Resource Creation using custom SAP Report with excel file upload functionality and ALV logs."
     },
     {
       id: 8,
-      title: "SAP Analytics",
+      title: "SAP File Upload/Download/Display/Zip/Unzip Report",
       category: "SAP",
-      image: "/assets/images/project-9.png",
-      link: "#",
-      description: "Advanced analytics and reporting solutions for SAP systems."
+      image: "/assets/images/project-9.jpg",  
+      description: "Custom Report to handle File Upload/Download/Display/Zip/Unzip functionality."
     },
     {
       id: 9,
-      title: "SAP Business Process",
+      title: "SAP Custom Action Trigger and Email Function",
       category: "SAP",
-      image: "/assets/images/project-1.jpg",
-      link: "#",
-      description: "Streamlined business process management and automation."
+      image: "/assets/images/project-10.jpg",
+      description: "Custom Action Trigger and Email Function for Business Process Management."
     },
     {
       id: 10,
-      title: "SAP Data Migration",
+      title: "SAP Custom Report for Editable ALV and PDF Generation",
       category: "SAP",
-      image: "/assets/images/project-2.png",
-      link: "#",
-      description: "Comprehensive data migration and transformation solutions."
+      image: "/assets/images/project-11.jpg",
+      description: "Custom Report for Editable ALV and PDF Generation."
     },
     {
       id: 11,
-      title: "SAP Custom Development",
+      title: "SAP BTP Application for Employee Management",
       category: "SAP",
-      image: "/assets/images/project-3.jpg",
-      link: "#",
-      description: "Custom SAP development and enhancement projects."
+      image: "/assets/images/project-12.jpg",
+      description: "SAP BTP Application for Employee Management."
     }
   ];
   // --- END: Rachit Khurana's GitHub Projects ---
@@ -220,7 +209,7 @@ const Portfolio = ({ isActive }: PortfolioProps) => {
         <ul className="project-list">
           {filteredProjects.map((project) => (
             <li key={project.id} className="project-item active" data-filter-item data-category={project.category.toLowerCase()}>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <a href="#" rel="noopener noreferrer">
                 <figure className="project-img">
                   <div className="project-item-icon-box">
                     {/* @ts-ignore */}
